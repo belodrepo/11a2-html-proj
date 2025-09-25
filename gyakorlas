@@ -1,3 +1,4 @@
+Javascript gyakorlás
 let price1 = 5;
 undefined
 price1
@@ -246,3 +247,4 @@ function calcTotal() {
     let total = parseInt(price.value) * parseInt(amount.value);
     result.innerHTML = total;
 }
+
