@@ -1,0 +1,248 @@
+let price1 = 5;
+undefined
+price1
+5
+let price2 = 6;
+undefined
+price2
+6
+var total = price1 + price2;
+undefined
+total
+11
+
+let myVariable;
+undefined
+myVariable = 15;
+15
+myVariable = 20;
+20
+const age = 22;
+undefined
+age
+22
+age = 33;
+VM540:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+
+let num = 4;
+undefined
+typeof num;
+'number'
+let name = "Karcsi";
+undefined
+typeof name
+'string'
+let active = true;
+undefined
+typeof active
+'boolean'
+
+name
+'Karcsi'
+name.length
+6
+name.replace("K", "M");
+'Marcsi'
+name
+'Karcsi'
+let name1 = name.replace("K", "M");
+undefined
+name1
+'Marcsi'
+
+let a;
+undefined
+typeof a;
+'undefined'
+a = 12;
+12
+typeof a;
+'number'
+a = null;
+null
+typeof a;
+'object'
+
+myAge - 5
+28
+myAge * 5
+165
+myAge / 5
+6.6
+
+6 % 3
+0
+6 % 5
+1
+11 % 2
+1
+
+2 + 3 * 2
+8
+(2 + 3) * 2
+10
+
+3 ** 3
+27
+3 ** 2
+9
+
+let username = "Nagy Géza";
+undefined
+username + " Elemér"
+'Nagy Géza Elemér'
+"Dr. " + username
+'Dr. Nagy Géza'
+'Kovács István'
+'Kovács István'
+"Tóth Péter'
+VM2230:1 Uncaught SyntaxError: Invalid or unexpected token
+
+var door = 11;
+undefined
+door
+11
+door / 2
+5.5
+door + 5
+16
+var door1 = door.toString();
+undefined
+typeof door1
+'string'
+door1 + 5
+'115'
+
+String(33)
+'33'
+var userAge = String(33);
+undefined
+typeof userAge
+'string'
+userAge = Number(userAge)
+33
+typeof userAge
+'number'
+
+Number("Hello")
+NaN
+Number("10")
+10
+Number()
+0
+Number("")
+0
+String("0")
+'0'
+
+String(-33)
+'-33'
+
+var amount = 33.543210
+undefined
+amount
+33.54321
+typeof amount
+'number'
+amount.toFixed(2)
+'33.54'
+amount.toPrecision(3)
+'33.5'
+
+parseInt("22")
+22
+parseInt("22hal")
+22
+parseInt("33hal22")
+33
+parseFloat(22)
+22
+parseFloat("22.33")
+22.33
+var num1 = parseFloat("22.33")
+undefined
+num1
+22.33
+parseInt(num1)
+22
+//Típuskonverzió
+let userAge = 33;
+undefined
+typeof userAge
+'number'
+String(userAge)
+'33'
+typeof userAge
+'number'
+let userAge1 = String(userAge);
+undefined
+typeof userAge1
+'string'
+typeof userAge
+'number'
+//Típuskonverzó utasításokkal
+typeof userAge
+'number'
+userAge.toString()
+'33'
+let userAge2 = userAge.toString();
+undefined
+typeof userAge2
+'string'
+//Típuskonerzió 2.
+num3
+22.33
+parseInt(num3)
+22
+parseFloat("22.33hal")
+22.33
+parseFloat("hal22.33");
+NaN
+
+--------------------------------------------
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h3 class="my-5">Hamburger rendelés</h3>
+                <div class="jumbotron bg-warning">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="priceInput">Ár</label>
+                            <input type="number" name="price-input" class="form-control" id="priceInput">
+                        </div>
+                        <div class="form-group">
+                            <label for="amountInput">Mennyiség</label>
+                            <input type="number" name="amount-input" class="form-control" id="amountInput">
+                        </div>
+                        <button type="button" class="btn btn-info" onclick="Calculate()">Megrendelés</button>
+                    </form>
+                </div>
+                <p>Végösszeg: <span class="result bg-dark text-white p-1">0</span> Ft</p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+<script src="js/main.js"></script>
+
+--------------------------
+let price = document.getElementById('priceInput');
+let amount = document.querySelector("input[name='amount-input']");
+let result = document.querySelector('span.result');
+function Calculate() {
+    //debugger;
+    let total = parseInt(price.value) * parseInt(amount.value);
+    result.innerHTML = total;
+}
+
+----------------------------------------------------------------------------
+function calcTotal() {
+    debugger;
+    let price = document.getElementById('priceInput');
+    let amount = document.getElementById('amountInput');
+    let result = document.querySelector("span.result");
+    let total = parseInt(price.value) * parseInt(amount.value);
+    result.innerHTML = total;
+}
